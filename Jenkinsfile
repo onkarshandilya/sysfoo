@@ -7,12 +7,12 @@ pipeline {
   stages{
       stage("build"){
           steps{
-              sh 'mavan compile'
+              sh 'mvn compile'
           }
       }
       stage("test"){
           steps{
-              sh 'mavan clean test'
+              sh 'mvn clean test'
           }
       }
       stage("package"){
