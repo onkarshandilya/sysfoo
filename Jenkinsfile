@@ -7,19 +7,16 @@ pipeline {
   stages{
       stage("build"){
           steps{
-              echo 'compile maven app'
               sh 'mavan compile'
           }
       }
       stage("test"){
           steps{
-              echo 'test maven app'
               sh 'mavan clean test'
           }
       }
       stage("package"){
           steps{
-              echo 'package maven app'
               sh 'mvn package -DskipTests'
           }
       }
